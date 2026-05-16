@@ -18,6 +18,11 @@ A simple production-ready Next.js dashboard for planning social media post ideas
 - Tailwind CSS
 - Browser `localStorage`
 
+## Requirements
+
+- Node.js 18.17 or newer
+- npm
+
 ## Getting started
 
 Install dependencies:

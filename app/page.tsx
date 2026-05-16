@@ -85,8 +85,14 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (isHydrated) {
+    if (!isHydrated) {
+      return;
+    }
+
+    try {
       window.localStorage.setItem(storageKey, JSON.stringify(posts));
+    } catch {
+      // Keep the planner usable even when storage is unavailable or full.
     }
   }, [isHydrated, posts]);
 
